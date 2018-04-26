@@ -42,7 +42,7 @@ print "Kr-Login Success\n"
 
 vipro = LINETCR.LINE() #(isi dengan akun utama fungsinya biar akun utama di kick langsung di invite bot)
 #vipro.login(qr=True)
-vipro.login(token='EsVRnZZywPUldyRd3hF6.REewN+Nk/mQ9YCqnNxEEPG.g0SXDJ9v0LRD0z7HMh8dXzRmcwDQ+w2d3+kFsg4WmFA=')
+vipro.login(token='EsbT6Ffznb2AW1gvOZ26.REewN+Nk/mQ9YCqnNxEEPG.BogDqgRtNq76E316G9pSSsLIgNYFmBYKz44lN//BC24=')
 vipro.loginResult()
 print "Vipro-Login Success\n"
 
@@ -167,7 +167,7 @@ setMessage ="""
 ☣ Notif on/off
 ☣ Url on/off
 ☣ Alwaysread on/off
-☣ Sider on/off
+☣ Jones on/off
 ☣ Contact on/off
 ☣ Simisimi on/off
 """
@@ -276,7 +276,7 @@ Emid = km.getProfile().mid
 Fmid = vipro.getProfile().mid
 Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,"uade1169ff9caf8cabdc9c40d9d779ea6"]
 Creator=["uade1169ff9caf8cabdc9c40d9d779ea6"]
-admin=["uade1169ff9caf8cabdc9c40d9d779ea6"]
+admin=["uade1169ff9caf8cabdc9c40d9d779ea6","u986d1bef0ab663d1b0ecf792019b344a","u44cd526e1d47869cabfca6974c3003b6","uba624a3e1be68e660e96487983499aa5","ude6bcd3367794cadd5effd2f7b8eea48"]
 
 contact = cl.getProfile()
 backup1 = cl.getProfile()
@@ -797,7 +797,7 @@ def bot(op):
 			kr.acceptGroupInvitationByTicket(op.param1,Ti)
 			G.preventJoinByTicket = True
 			cl.updateGroup(G)
-			cl.sendText(op.param1,"☆Ketik ☞Help☜ Untuk Bantuan☆\n☆Harap Gunakan Dengan Bijak ^_^ ☆")
+			cl.sendText(op.param1,"ok")
                         		    
  
 	    if mid in op.param3:
@@ -815,9 +815,9 @@ def bot(op):
 			kk.acceptGroupInvitationByTicket(op.param1,Ti)
 			kc.acceptGroupInvitationByTicket(op.param1,Ti)
 			kr.acceptGroupInvitationByTicket(op.param1,Ti)
-			G.preventJoinByTicket = True
+			G.preventJoinByTicket = T.rue
 			cl.updateGroup(G)
-			cl.sendText(op.param1,"☆Ketik ☞Help☜ Untuk Bantuan☆\n☆Harap Gunakan Dengan Bijak ^_^ ☆")
+			cl.sendText(op.param1,"ok")
 	    else:
                 if wait["AutoCancel"][op.param1] == True:
 		    if op.param3 in admin:
@@ -1365,16 +1365,16 @@ def bot(op):
             elif msg.text in ["Admin","admin"]:
                 msg.contentType = 13
                 admin1 = "uade1169ff9caf8cabdc9c40d9d779ea6"
-                admin2 = "uade1169ff9caf8cabdc9c40d9d779ea6"
-                admin3 = "uade1169ff9caf8cabdc9c40d9d779ea6"
+                admin2 = "u986d1bef0ab663d1b0ecf792019b344a"
+                admin3 = "u44cd526e1d47869cabfca6974c3003b6"
                 msg.contentMetadata = {'mid': "uade1169ff9caf8cabdc9c40d9d779ea6"}
                 random.choice(KAC).sendMessage(msg)
-                #msg.contentMetadata = {'mid': admin1}
-                #random.choice(KAC).sendMessage(msg)
-                #msg.contentMetadata = {'mid': admin2}
-                #random.choice(KAC).sendMessage(msg)
-                #msg.contentMetadata = {'mid': admin3}
-                #random.choice(KAC).sendMessage(msg)                
+                msg.contentMetadata = {'mid': admin1}
+                random.choice(KAC).sendMessage(msg)
+                msg.contentMetadata = {'mid': admin2}
+                random.choice(KAC).sendMessage(msg)
+                msg.contentMetadata = {'mid': admin3}
+                random.choice(KAC).sendMessage(msg)                
 		random.choice(KAC).sendText(msg.to,"Itu Admin Kami ")	
 		
  
@@ -1769,14 +1769,14 @@ def bot(op):
                     wait["AutoJoin"] = False
                     cl.sendText(msg.to,"Auto Join Cancel Sudah Aktif")
 		else:
-		    cl.sendText(msg.to,"Khusus Vipro")
+		    cl.sendText(msg.to,"Khusus ")
 
             elif msg.text in ["Joincancel off","Autojoincancel off"]:
 		if msg.from_ in admin:
                     wait["AutoJoinCancel"] = False
                     cl.sendText(msg.to,"Auto Join Cancel Sudah Di Nonaktifkan")
 		else:
-		    cl.sendText(msg.to,"Khusus Vipro")		    
+		    cl.sendText(msg.to,"Khusus ")		    
 		    
  
             elif msg.text in ["Respon on"]:
@@ -1785,7 +1785,7 @@ def bot(op):
                     wait["kickMention"] = False
                     cl.sendText(msg.to,"Auto Respon Sudah Aktif")
 		else:
-		    cl.sendText(msg.to,"Khusus Vipro")
+		    cl.sendText(msg.to,"Khusus ")
 
             elif msg.text in ["Respon off"]:
 		if msg.from_ in admin:
@@ -1802,21 +1802,21 @@ def bot(op):
                     wait["detectMention"] = False
                     cl.sendText(msg.to,"Auto Respon Kick Sudah Aktif")
 		else:
-		    cl.sendText(msg.to,"Khusus Vipro")
+		    cl.sendText(msg.to,"Khusus ")
 
             elif msg.text in ["Responkick off"]:
 		if msg.from_ in admin:
                     wait["kickMention"] = False                    
                     cl.sendText(msg.to,"Auto Respon Kick Sudah Off")
 		else:
-		    cl.sendText(msg.to,"Khusus Vipro")			  
+		    cl.sendText(msg.to,"Khusus ")			  
  
             elif msg.text in ["Leave on"]:
 		if msg.from_ in admin:
                     wait["Leave"] = True
                     cl.sendText(msg.to,"Leave Sudah Aktif")
 		else:
-		    cl.sendText(msg.to,"Khusus Vipro")
+		    cl.sendText(msg.to,"Khusus ")
 		    
  
 	    elif msg.text in ["Autocancel on"]:
@@ -1826,7 +1826,7 @@ def bot(op):
                 cl.sendText(msg.to,"Auto Cancel Sudah Aktif")
 		print wait["AutoCancel"]
 	     else:
-		    cl.sendText(msg.to,"Khusus Vipro")		
+		    cl.sendText(msg.to,"Khusus ")		
 
 	    elif msg.text in ["Autocancel off"]:
 	     if msg.from_ in admin:	        
@@ -1835,7 +1835,7 @@ def bot(op):
                 cl.sendText(msg.to,"Auto Cancel Sudah Di Nonaktifkan")
 		print wait["AutoCancel"]
 	     else:
-		    cl.sendText(msg.to,"Khusus Vipro")	
+		    cl.sendText(msg.to,"Khusus ")	
 
 
 	    elif msg.text in ["Joinkick on"]:
@@ -1844,14 +1844,14 @@ def bot(op):
                 wait["Sambutan"] = False
                 cl.sendText(msg.to,"Join Kick Sudah Aktif")
 	     else:
-		    cl.sendText(msg.to,"Khusus Vipro")		
+		    cl.sendText(msg.to,"Khusus ")		
 
 	    elif msg.text in ["Joinkick off"]:
 	     if msg.from_ in admin:	        
                 wait["joinkick"] = False
                 cl.sendText(msg.to,"Join Kick Sudah Di Nonaktifkan")
 	     else:
-		    cl.sendText(msg.to,"Khusus Vipro")	
+		    cl.sendText(msg.to,"Khusus ")	
 
 		    
 
@@ -1860,14 +1860,14 @@ def bot(op):
                 wait["inviteprotect"] = True
                 cl.sendText(msg.to,"Invite Protect Sudah Aktif")
 	     else:
-		    cl.sendText(msg.to,"Khusus Vipro")		
+		    cl.sendText(msg.to,"Khusus ")		
 
 	    elif msg.text in ["Invitepro off","Inviteprotect off"]:
 	     if msg.from_ in admin:	        
                 wait["inviteprotect"] = False
                 cl.sendText(msg.to,"Invite Protect Sudah Di Nonaktifkan")
 	     else:
-		    cl.sendText(msg.to,"Khusus Vipro")		    
+		    cl.sendText(msg.to,"Khusus ")		    
 
 	    elif "Qr on" in msg.text:
 	     if msg.from_ in admin:	        
@@ -1876,7 +1876,7 @@ def bot(op):
 	    	cl.sendText(msg.to,"QR Protect Sudah Aktif")
 		print wait["Qr"]	    	
 	     else:
-		    cl.sendText(msg.to,"Khusus Vipro")	    	
+		    cl.sendText(msg.to,"Khusus ")	    	
 
 	    elif "Qr off" in msg.text:
 	     if msg.from_ in admin:	        
@@ -1885,7 +1885,7 @@ def bot(op):
 	    	cl.sendText(msg.to,"Qr Protect Sudah Di Nonaktifkan")
 		print wait["Qr"]	    	
 	     else:
-		    cl.sendText(msg.to,"Khusus Vipro")	    	
+		    cl.sendText(msg.to,"Khusus ")	    	
                         
 	    elif msg.text in ["Autokick on"]:
 	     if msg.from_ in admin:	        
@@ -1894,7 +1894,7 @@ def bot(op):
                 cl.sendText(msg.to,"Auto Kick Sudah Aktif")
 		print wait["AutoKick"]
 	     else:
-		    cl.sendText(msg.to,"Khusus Vipro")		
+		    cl.sendText(msg.to,"Khusus ")		
 
 	    elif msg.text in ["Autokick off"]:
 	     if msg.from_ in admin:	        
@@ -1903,7 +1903,7 @@ def bot(op):
                 cl.sendText(msg.to,"Auto Kick Sudah Di Nonaktifkan")
 		print wait["AutoKick"]
 	     else:
-		    cl.sendText(msg.to,"Khusus Vipro")	
+		    cl.sendText(msg.to,"Khusus ")	
 
 
 	    elif msg.text in ["Ghost on"]:
@@ -1911,14 +1911,14 @@ def bot(op):
                 wait["Ghost"] = True
                 cl.sendText(msg.to,"Ghost Sudah Aktif")
 	     else:
-		    cl.sendText(msg.to,"Khusus Vipro")		
+		    cl.sendText(msg.to,"Khusus ")		
 
 	    elif msg.text in ["Ghost off"]:
 	     if msg.from_ in admin:	        
                 wait["Ghost"] = False
                 cl.sendText(msg.to,"Ghost Sudah Di Nonaktifkan")
 	     else:
-		    cl.sendText(msg.to,"Khusus Vipro")	     
+		    cl.sendText(msg.to,"Khusus ")	     
 
             elif msg.text in ["Allprotect on"]:
 		if msg.from_ in admin:
@@ -1936,7 +1936,7 @@ def bot(op):
 		    print wait["AutoKick"]
 		    print wait["Qr"]
 		else:
-		    cl.sendText(msg.to,"Khusus Vipro")
+		    cl.sendText(msg.to,"Khusus ")
 
             elif msg.text in ["Allprotect off"]:
 		if msg.from_ in admin:
@@ -1955,7 +1955,7 @@ def bot(op):
 		    print wait["Qr"]
 #		else:                    
 		else:
-		    cl.sendText(msg.to,"Khusus Vipro")
+		    cl.sendText(msg.to,"Khusus ")
 
 
             elif msg.text in ["K on","Contact on"]:
@@ -1996,7 +1996,7 @@ def bot(op):
                         cl.sendText(msg.to,"Sudah Off")
                         
                         
-            elif "Sider on" in msg.text:
+            elif "Jones on" in msg.text:
                 try:
                     del cctv['point'][msg.to]
                     del cctv['sidermem'][msg.to]
@@ -2007,13 +2007,13 @@ def bot(op):
                 cctv['sidermem'][msg.to] = ""
                 cctv['cyduk'][msg.to]=True
                 wait["Sider"] = True
-                cl.sendText(msg.to,"Siap Cek Sider")
+                cl.sendText(msg.to,"Siap Cek Jones")
                 
-            elif "Sider off" in msg.text:
+            elif "Jones off" in msg.text:
                 if msg.to in cctv['point']:
                     cctv['cyduk'][msg.to]=False
                     wait["Sider"] = False
-                    cl.sendText(msg.to, "Cek Sider Off")
+                    cl.sendText(msg.to, "Jones Off")
                 else:
                     cl.sendText(msg.to, "Heh Belom Di Set")                         
 
@@ -2796,7 +2796,7 @@ def bot(op):
 		gid = cl.getGroupIdsJoined()
 		if msg.from_ in Creator:
 		    for i in gid:
-			cl.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\nContact Me : line.me/ti/p/~gjxvipro")
+			cl.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n")
 		    cl.sendText(msg.to,"Success BC BosQ")
 		else:
 		    cl.sendText(msg.to,"Khusus Admin")
@@ -2839,7 +2839,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
 
-            elif msg.text in ["All join","Join all"]:
+            elif msg.text in ["."]:
 		if msg.from_ in admin:
 		    G = cl.getGroup(msg.to)
                     ginfo = cl.getGroup(msg.to)
@@ -2942,7 +2942,7 @@ def bot(op):
 		except Exception as E:
 		    print E
 
-            elif msg.text in ["Bye bot"]:
+            elif msg.text in [","]:
               if wait["Leave"] == True:		    
                     ki.leaveGroup(msg.to)
                     kk.leaveGroup(msg.to)
